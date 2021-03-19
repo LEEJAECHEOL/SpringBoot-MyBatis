@@ -1,4 +1,6 @@
 #SpringBoot MyBatis 맛보기
+###
+https://mybatis.org/mybatis-3/ko/sqlmap-xml.html#select
 
 ### 의존성
 - Spring Boot DevTools
