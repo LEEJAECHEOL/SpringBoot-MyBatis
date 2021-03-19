@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cos.myBatisex01.repository.ProductRepository">
+	<insert id="save">
+		INSERT INTO product(name, code) VALUES(#{name}, #{code})
+	</insert>
+	
+	<select id="findAll" resultType="com.cos.myBatisex01.model.Product">
+		SELECT * FROM product
+	</select>
+	<select id="findById" resultType="com.cos.myBatisex01.model.Product">
+		SELECT * FROM product WHERE id = #{id}
+	</select>
+	
+	<update id="updateById">
+	  UPDATE product SET
+	    name = #{name},
+	    code = #{code}
+	  WHERE id = #{id}
+	</update>
+	
+	<delete id="delete">
+	  DELETE FROM product where id = #{id}
+	</delete>
+</mapper>
